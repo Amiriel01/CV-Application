@@ -1,8 +1,70 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: #f9f9f9;
 }
 
 .whole-page {
   display: flex;
+  width: 100vw;
+}
+
+.page-header {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #050505;
+  color: #A5C9FF;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  justify-content: space-around;
+  border: 1px solid #050505;
+  border-radius: 5%;
+  padding: 1rem;
+  background-color: #A5C9FF;
+}
+
+legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #A5C9FF;
+}
+
+label {
+  background-color: #A5C9FF;
+}
+
+input {
+  font-size: 18px;
+  padding: .15rem;
+}
+
+textarea {
+  overflow: hidden;
+  resize: vertical;
+  font-size: 18px;
+  height: 1.5rem;
+  padding: .1rem;
+  border: #050505 2px solid;
+}
+
+.button-container {
+  background-color: #A5C9FF;
+  margin-top: 1rem;
+}
+
+.cv-page {
+  flex: 2;
+}
+
+.cv-template {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+  border: #050505 1px solid;
+  height: 100%;
 }

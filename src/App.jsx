@@ -26,11 +26,11 @@ function App() {
   return (
     <div>
       <header>
-        <h1>CV Application Creator</h1>
+        <h1 class="page-header">CV Application Creator</h1>
       </header>
       <main>
         <section className="whole-page">
-          <section className="forms-container">
+          <section className="all-forms-container">
             <GeneralForm
               fullNameValueState={setFullNameValue}
               emailValueState={setEmailValue}

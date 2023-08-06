@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function EducationForm({schoolNameState, studyFocusState, schoolStartDateState, schoolEndDateState}) {
+function EducationForm({ schoolNameState, studyFocusState, schoolStartDateState, schoolEndDateState }) {
     //set const state//
     const [schoolNameValue, setSchoolNameValue] = useState('');
     const [studyFocusValue, setStudyFocusValue] = useState('');
@@ -30,18 +30,20 @@ function EducationForm({schoolNameState, studyFocusState, schoolStartDateState, 
 
     return (
         <form onSubmit={handleSubmit}>
-            <legend>Education Information</legend>
-            <label>School Name:</label>
-            <input key='school' type='text' value={schoolNameValue} required onChange={handleSchoolChange} />
-            <label>Study Focus:</label>
-            <input key='study' type="text" value={studyFocusValue} required onChange={handleStudyFocus} />
-            <label>Start Date:</label>
-            <input key='start' type='date' value={schoolStartDateValue} required onChange={handleStartDate} />
-            <label>End Date:</label>
-            <input key='end' type="date" value={schoolEndDateValue} required onChange={handleEndDate} />
-            <div>
-                <button>Submit</button>
-            </div>
+            <section className="form-container">
+                <legend>Education Information</legend>
+                <label>School Name:</label>
+                <textarea type='text' value={schoolNameValue} required onChange={handleSchoolChange} />
+                <label>Study Focus:</label>
+                <textarea type="text" value={studyFocusValue} required onChange={handleStudyFocus} />
+                <label>Start Date:</label>
+                <input  type='date' value={schoolStartDateValue} required onChange={handleStartDate} />
+                <label>End Date:</label>
+                <input type="date" value={schoolEndDateValue} required onChange={handleEndDate} />
+                <div className="button-container">
+                    <button>Submit</button>
+                </div>
+            </section>
         </form>
     )
 }

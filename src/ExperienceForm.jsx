@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ExperienceForm({companyNameValueState, jobTitleValueState, jobResposibilitiesValueState, jobStartDateValueState, jobEndDateValueState}) {
+function ExperienceForm({ companyNameValueState, jobTitleValueState, jobResposibilitiesValueState, jobStartDateValueState, jobEndDateValueState }) {
     const [companyNameValue, setCompanyNameValue] = useState('');
     const [jobTitleValue, setJobTitleValue] = useState('');
     const [jobResposibilitiesValue, setJobResponsibilitiesValue] = useState('');
@@ -34,20 +34,22 @@ function ExperienceForm({companyNameValueState, jobTitleValueState, jobResposibi
 
     return (
         <form onSubmit={handleSubmit}>
-            <legend>Experience Information</legend>
-            <label>Company Name:</label>
-            <input key='company' type='text' value={companyNameValue} required onChange={handleCompanyChange} />
-            <label>Job Title:</label>
-            <input key='title' type="text" value={jobTitleValue} required onChange={handleJobTitleChange} />
-            <label>Job Responsibilities:</label>
-            <input key='responsibilities' type="text" value={jobResposibilitiesValue} required onChange={handleJobResponsibilities} />
-            <label>Start Date:</label>
-            <input key='start' type="date" value={jobStartDateValue} required onChange={handleStartDate} />
-            <label>End Date:</label>
-            <input key='end' type="date" value={jobEndDateValue} required onChange={handleEndDate} />
-            <div>
-                <button>Submit</button>
-            </div>
+            <section className="form-container">
+                <legend>Experience Information</legend>
+                <label>Company Name:</label>
+                <intextarea type='text' value={companyNameValue} required onChange={handleCompanyChange} />
+                <label>Job Title:</label>
+                <textarea type="text" value={jobTitleValue} required onChange={handleJobTitleChange} />
+                <label>Job Responsibilities:</label>
+                <textarea type="text" value={jobResposibilitiesValue} required onChange={handleJobResponsibilities} />
+                <label>Start Date:</label>
+                <input type="date" value={jobStartDateValue} required onChange={handleStartDate} />
+                <label>End Date:</label>
+                <input type="date" value={jobEndDateValue} required onChange={handleEndDate} />
+                <div className="button-container">
+                    <button>Submit</button>
+                </div>
+            </section>
         </form>
     )
 }

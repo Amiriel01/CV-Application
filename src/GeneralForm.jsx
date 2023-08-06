@@ -1,6 +1,6 @@
 import { useState } from "react";
 //set props to move to other functions//
-function GeneralForm({fullNameValueState, emailValueState, phoneValueState}) {
+function GeneralForm({ fullNameValueState, emailValueState, phoneValueState }) {
     //set states for each of the inputs//
     const [fullNameValue, setFullNameValue] = useState('');
     const [emailValue, setEmailValue] = useState('');
@@ -26,16 +26,18 @@ function GeneralForm({fullNameValueState, emailValueState, phoneValueState}) {
     return (
         //set onSubmit//
         <form onSubmit={handleSubmit}>
-            <legend>General Information</legend>
-            <label>Full Name:</label>
-            <input key='name' type='text' value={fullNameValue} required onChange={handleNameChange} />
-            <label>Email:</label>
-            <input key='email' type='email' value={emailValue} required onChange={handleEmailChange} />
-            <label>Phone:</label>
-            <input key='phone' type='phone' value={phoneValue} required onChange={handlePhoneChange} />
-            <div>
-                <button>Submit</button>
-            </div>
+            <section className="form-container">
+                <legend>General Information</legend>
+                <label>Full Name:</label>
+                <input key='name' type='text' value={fullNameValue} required onChange={handleNameChange} />
+                <label>Email:</label>
+                <input key='email' type='email' value={emailValue} required onChange={handleEmailChange} />
+                <label>Phone:</label>
+                <input key='phone' type='phone' value={phoneValue} required onChange={handlePhoneChange} />
+                <div className="button-container">
+                    <button>Submit</button>
+                </div>
+            </section>
         </form>
     )
 }
