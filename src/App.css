@@ -20,7 +20,7 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  margin-left: 5rem;
+  margin-left: 8rem;
   margin-right: 5rem;
   margin-top: 2rem;
   justify-content: space-around;
@@ -65,12 +65,11 @@ textarea {
 }
 
 .cv-template {
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 8rem;
   margin-top: 2rem;
   border: #050505 1px solid;
-  height: 80%;
-  width: 80%;
+  height: 70%;
+  width: 70%;
 }
 
 .general-information {
