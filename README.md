@@ -1,8 +1,23 @@
-# React + Vite
+# CV Application Creator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Objective**
 
-Currently, two official plugins are available:
+The objective of this project is to create a form in React that will populate a CV application. I used React, HTML, CSS, JSON, Vite, and ESLint in this project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+***Images***
+
+![](image1.png)
+
+![](image2.png)
+
+![](image3.png)
+
+***Features***
+
+1. There are three forms for users to fill out that will populate the CV application page.
+    a. General Information Form: This form takes the users Name, Email, and Phone Number. 
+    b. Education Information Form: This form takes the users School Name, Study Focus, Start Date and End Date. 
+    c. Employement Information: This form takes the users Company Name, Job Title, Job Responsibilities, Start Date, and End Date.
+
+2. Users can edit the form after they submit it to the CV page by changing the information and hitting submit again.
+
