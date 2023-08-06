@@ -9,6 +9,7 @@ function CVTemplate({ fullNameValue, emailValue, phoneValue, schoolNameValue, st
                 </section>
             </div>
             <div className="education-information">
+                <p className="education-header">Education Inforamtion</p>
                 <p>{schoolNameValue}</p>
                 <p>{studyFocusValue}</p>
                 <p>{schoolStartDateValue}</p>

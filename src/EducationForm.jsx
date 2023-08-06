@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function EducationForm(schoolNameState, studyFocusState, schoolStartDateState, schoolEndDateState) {
+function EducationForm({schoolNameState, studyFocusState, schoolStartDateState, schoolEndDateState}) {
     //set const state//
     const [schoolNameValue, setSchoolNameValue] = useState('');
     const [studyFocusValue, setStudyFocusValue] = useState('');
