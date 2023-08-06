@@ -12,20 +12,20 @@ function CVTemplate({ fullNameValue, emailValue, phoneValue, schoolNameValue, st
                     <p className="cv-phone">{phoneValue}</p>
                 </section>
             </div>
-            <div className="education-information">
+            <div className="education-information-container">
                 <p className="education-header">Education Inforamtion</p>
-                <p>{schoolNameValue}</p>
-                <p>{studyFocusValue}</p>
-                <p>{schoolStartDateValue}</p>
-                <p>{schoolEndDateValue}</p>
+                <p className="education-info">{schoolNameValue}</p>
+                <p className="education-info">{studyFocusValue}</p>
+                <p className="education-info">{schoolStartDateValue} to {schoolEndDateValue}</p>
+                
             </div>
-            <div className="experience-information">
+            <div className="experience-information-container">
                 <p className="experience-header">Experience Information</p>
-                <p>{companyNameValue}</p>
-                <p>{jobTitleValue}</p>
-                <p>{jobResposibilitiesValue}</p>
-                <p>{jobStartDateValue}</p>
-                <p>{jobEndDateValue}</p>
+                <p className="education-info">{companyNameValue}</p>
+                <p className="education-info">{jobTitleValue}</p>
+                <p className="education-info">{jobResposibilitiesValue}</p>
+                <p className="education-info">{jobStartDateValue} to {jobEndDateValue}</p>
+                
             </div>
 
 
