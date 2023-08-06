@@ -1,11 +1,15 @@
-function CVTemplate({ fullNameValue, emailValue, phoneValue, schoolNameValue, studyFocusValue, schoolStartDateValue, schoolEndDateValue, companyNameValue, jobTitleValue, jobResposibilitiesValue, jobStartDateValue, jobEndDateValue}) {
+// import { EmailIcon, PhoneIcon} from '@mui/icons-material'
+
+
+function CVTemplate({ fullNameValue, emailValue, phoneValue, schoolNameValue, studyFocusValue, schoolStartDateValue, schoolEndDateValue, companyNameValue, jobTitleValue, jobResposibilitiesValue, jobStartDateValue, jobEndDateValue }) {
     return (
         <div className="cv-template">
             <div className="general-information">
                 <p className="cv-name">{fullNameValue}</p>
-                <section className="email-phone">
-                    <p>{emailValue}</p>
-                    <p>{phoneValue}</p>
+                <section className="cv-email-phone">
+                    <p className="cv-email">{emailValue}</p>
+                    <div class="diamond">&#x25C6;</div>
+                    <p className="cv-phone">{phoneValue}</p>
                 </section>
             </div>
             <div className="education-information">

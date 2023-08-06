@@ -1,3 +1,4 @@
+/*whole page styling*/
 * {
   margin: 0;
   padding: 0;
@@ -15,16 +16,17 @@
   background-color: #050505;
   color: #A5C9FF;
 }
-
+/* form styling*/
 .form-container {
   display: flex;
   flex-direction: column;
-  margin-left: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
   margin-top: 2rem;
   justify-content: space-around;
   border: 1px solid #050505;
   border-radius: 5%;
-  padding: 1rem;
+  padding: 2rem;
   background-color: #A5C9FF;
 }
 
@@ -56,9 +58,10 @@ textarea {
   background-color: #A5C9FF;
   margin-top: 1rem;
 }
-
+/* cv page styling*/
 .cv-page {
   flex: 2;
+  justify-content: center;
 }
 
 .cv-template {
@@ -66,5 +69,44 @@ textarea {
   margin-right: 5rem;
   margin-top: 2rem;
   border: #050505 1px solid;
-  height: 100%;
+  height: 80%;
+  width: 80%;
+}
+
+.general-information {
+  padding: 2rem;
+  background-color: #A5C9FF;
+  text-align: center;
+}
+
+.cv-email-phone {
+  display: flex;
+  background-color: #A5C9FF;
+  justify-content: center;
+
+}
+
+.cv-name,
+.cv-email,
+.cv-phone,
+.diamond {
+  background-color: #A5C9FF;
+  font-weight: bold;
+}
+
+.cv-name {
+  font-size: 48px;
+}
+
+.cv-email,
+.cv-phone {
+  font-size: 24px;
+}
+
+.cv-email {
+  padding-right: 4rem;
+}
+
+.cv-phone {
+  padding-left: 4rem;
 }

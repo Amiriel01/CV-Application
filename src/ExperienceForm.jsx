@@ -37,7 +37,7 @@ function ExperienceForm({ companyNameValueState, jobTitleValueState, jobResposib
             <section className="form-container">
                 <legend>Experience Information</legend>
                 <label>Company Name:</label>
-                <intextarea type='text' value={companyNameValue} required onChange={handleCompanyChange} />
+                <textarea type='text' value={companyNameValue} required onChange={handleCompanyChange} />
                 <label>Job Title:</label>
                 <textarea type="text" value={jobTitleValue} required onChange={handleJobTitleChange} />
                 <label>Job Responsibilities:</label>

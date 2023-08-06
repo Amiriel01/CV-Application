@@ -1,9 +1,11 @@
 import { useState } from 'react'
+// import { EmailIcon, PhoneIcon} from '@mui/icons-material'
 import './App.css'
 import GeneralForm from './GeneralForm'
 import EducationForm from './EducationForm'
 import ExperienceForm from './ExperienceForm'
 import CVTemplate from './CVTemplate'
+
 
 function App() {
   //import const from jsx form files and add useState start text//
