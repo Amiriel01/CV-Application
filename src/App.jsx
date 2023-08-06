@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { GeneralForm } from './GeneralForm.jsx'
 import { EducationForm } from './EducationForm.jsx'
+import { ExperienceForm } from './ExperienceForm'
 
 function App() {
   
@@ -11,6 +12,7 @@ function App() {
     <div>
    <GeneralForm />
    <EducationForm />
+   <ExperienceForm />
    </div>
   )
 }
