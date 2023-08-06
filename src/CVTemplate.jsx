@@ -1,4 +1,4 @@
-function CVTemplate({ fullNameValue, emailValue, phoneValue, schoolNameValue, studyFocusValue, schoolStartDateValue, schoolEndDateValue}) {
+function CVTemplate({ fullNameValue, emailValue, phoneValue, schoolNameValue, studyFocusValue, schoolStartDateValue, schoolEndDateValue, companyNameValue, jobTitleValue, jobResposibilitiesValue, jobStartDateValue, jobEndDateValue}) {
     return (
         <div className="cv-template">
             <div className="general-information">
@@ -14,6 +14,14 @@ function CVTemplate({ fullNameValue, emailValue, phoneValue, schoolNameValue, st
                 <p>{studyFocusValue}</p>
                 <p>{schoolStartDateValue}</p>
                 <p>{schoolEndDateValue}</p>
+            </div>
+            <div className="experience-information">
+                <p className="experience-header">Experience Information</p>
+                <p>{companyNameValue}</p>
+                <p>{jobTitleValue}</p>
+                <p>{jobResposibilitiesValue}</p>
+                <p>{jobStartDateValue}</p>
+                <p>{jobEndDateValue}</p>
             </div>
 
 

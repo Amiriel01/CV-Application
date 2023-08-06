@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import GeneralForm from './GeneralForm'
 import EducationForm from './EducationForm'
-import { ExperienceForm } from './ExperienceForm'
+import ExperienceForm from './ExperienceForm'
 import CVTemplate from './CVTemplate'
 
 function App() {
@@ -16,6 +16,12 @@ function App() {
   const [studyFocusValue, setStudyFocusValue] = useState('Study Focus');
   const [schoolStartDateValue, setSchoolStartDateValue] = useState('Start Date');
   const [schoolEndDateValue, setSchoolEndDateValue] = useState('End Date');
+  //experience info const//
+  const [companyNameValue, setCompanyNameValue] = useState('Company Name');
+  const [jobTitleValue, setJobTitleValue] = useState('Job Title');
+  const [jobResposibilitiesValue, setJobResponsibilitiesValue] = useState('Job Responsibilities');
+  const [jobStartDateValue, setJobStartDateValue] = useState('Start Date');
+  const [jobEndDateValue, setJobEndDateValue] = useState('End Date');
 
   return (
     <div>
@@ -23,30 +29,43 @@ function App() {
         <h1>CV Application Creator</h1>
       </header>
       <main>
-        <section className="forms-container">
-          <GeneralForm
-            fullNameValueState={setFullNameValue}
-            emailValueState={setEmailValue}
-            phoneValueState={setPhoneValue}
-          />
-          <EducationForm 
-            schoolNameState={setSchoolNameValue}
-            studyFocusState={setStudyFocusValue}
-            schoolStartDateState={setSchoolStartDateValue}
-            schoolEndDateState={setSchoolEndDateValue}
-          />
-          <ExperienceForm />
-        </section>
-        <section>
-          <CVTemplate
-            fullNameValue={fullNameValue}
-            emailValue={emailValue}
-            phoneValue={phoneValue}
-            schoolNameValue={schoolNameValue}
-            studyFocusValue={studyFocusValue}
-            schoolStartDateValue={schoolStartDateValue}
-            schoolEndDateValue={schoolEndDateValue}
-          />
+        <section className="whole-page">
+          <section className="forms-container">
+            <GeneralForm
+              fullNameValueState={setFullNameValue}
+              emailValueState={setEmailValue}
+              phoneValueState={setPhoneValue}
+            />
+            <EducationForm
+              schoolNameState={setSchoolNameValue}
+              studyFocusState={setStudyFocusValue}
+              schoolStartDateState={setSchoolStartDateValue}
+              schoolEndDateState={setSchoolEndDateValue}
+            />
+            <ExperienceForm
+              companyNameValueState={setCompanyNameValue}
+              jobTitleValueState={setJobTitleValue}
+              jobResposibilitiesValueState={setJobResponsibilitiesValue}
+              jobStartDateValueState={setJobStartDateValue}
+              jobEndDateValueState={setJobEndDateValue}
+            />
+          </section>
+          <section className="cv-page">
+            <CVTemplate
+              fullNameValue={fullNameValue}
+              emailValue={emailValue}
+              phoneValue={phoneValue}
+              schoolNameValue={schoolNameValue}
+              studyFocusValue={studyFocusValue}
+              schoolStartDateValue={schoolStartDateValue}
+              schoolEndDateValue={schoolEndDateValue}
+              companyNameValue={companyNameValue}
+              jobTitleValue={jobTitleValue}
+              jobResposibilitiesValue={jobResposibilitiesValue}
+              jobStartDateValue={jobStartDateValue}
+              jobEndDateValue={jobEndDateValue}
+            />
+          </section>
         </section>
       </main>
     </div>
