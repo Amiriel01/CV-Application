@@ -1,39 +1,44 @@
 import { useState } from "react";
 
-function EducationForm() {
-    const [schoolName, setSchoolName] = useState('');
-    const [studyFocus, setStudyFocus] = useState('');
-    const [startDate, setStartDate] = useState('');
-    const [endDate, setEndDate] = useState('');
-
+function EducationForm(schoolNameState, studyFocusState, schoolStartDateState, schoolEndDateState) {
+    //set const state//
+    const [schoolNameValue, setSchoolNameValue] = useState('');
+    const [studyFocusValue, setStudyFocusValue] = useState('');
+    const [schoolStartDateValue, setSchoolStartDateValue] = useState('');
+    const [schoolEndDateValue, setSchoolEndDateValue] = useState('');
+    //set handleChange for each const//
     const handleSchoolChange = (e) => {
-        setSchoolName(e.target.value);
+        setSchoolNameValue(e.target.value);
     }
     const handleStudyFocus = (e) => {
-        setStudyFocus(e.target.value);
+        setStudyFocusValue(e.target.value);
     }
     const handleStartDate = (e) => {
-        setStartDate(e.target.value);
+        setSchoolStartDateValue(e.target.value);
     }
     const handleEndDate = (e) => {
-        setEndDate(e.target.value);
+        setSchoolEndDateValue(e.target.value);
     }
-
+    //set submit for each const and added state for export of props//
     const handleSubmit = (e) => {
         e.preventDefault();
+        schoolNameState(schoolNameValue);
+        studyFocusState(studyFocusValue);
+        schoolStartDateState(schoolStartDateValue);
+        schoolEndDateState(schoolEndDateValue);
     }
 
     return (
         <form onSubmit={handleSubmit}>
             <legend>Education Information</legend>
             <label>School Name:</label>
-            <input key='school' type='text' value={schoolName} required onChange={handleSchoolChange} />
+            <input key='school' type='text' value={schoolNameValue} required onChange={handleSchoolChange} />
             <label>Study Focus:</label>
-            <input key='study' type="text" value={studyFocus} required onChange={handleStudyFocus} />
+            <input key='study' type="text" value={studyFocusValue} required onChange={handleStudyFocus} />
             <label>Start Date:</label>
-            <input key='start' type='date' value={startDate} required onChange={handleStartDate} />
+            <input key='start' type='date' value={schoolStartDateValue} required onChange={handleStartDate} />
             <label>End Date:</label>
-            <input key='end' type="date" value={endDate} required onChange={handleEndDate} />
+            <input key='end' type="date" value={schoolEndDateValue} required onChange={handleEndDate} />
             <div>
                 <button>Submit</button>
             </div>
@@ -41,4 +46,4 @@ function EducationForm() {
     )
 }
 
-export { EducationForm };
+export default EducationForm;

@@ -1,10 +1,11 @@
 import { useState } from "react";
-
-function GeneralForm() {
+//set props to move to other functions//
+function GeneralForm({fullNameValueState, emailValueState, phoneValueState}) {
+    //set states for each of the inputs//
     const [fullNameValue, setFullNameValue] = useState('');
     const [emailValue, setEmailValue] = useState('');
     const [phoneValue, setPhoneValue] = useState('');
-
+    //set onChange values//
     const handleNameChange = (e) => {
         setFullNameValue(e.target.value);
     }
@@ -14,13 +15,16 @@ function GeneralForm() {
     const handlePhoneChange = (e) => {
         setPhoneValue(e.target.value);
     }
-
+    //set data to move on submit button//
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        fullNameValueState(fullNameValue);
+        emailValueState(emailValue);
+        phoneValueState(phoneValue);
     }
 
     return (
+        //set onSubmit//
         <form onSubmit={handleSubmit}>
             <legend>General Information</legend>
             <label>Full Name:</label>
@@ -36,4 +40,4 @@ function GeneralForm() {
     )
 }
 
-export { GeneralForm };
+export default GeneralForm;
