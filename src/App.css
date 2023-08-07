@@ -129,8 +129,9 @@ textarea {
 }
 
 .experience-information-container {
-  overflow-y: scroll;
   overflow: hidden;
+  overflow-y:auto;
+  
 }
 
 .education-header,
