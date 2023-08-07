@@ -78,6 +78,8 @@ textarea {
   width: 70%;
   overflow-wrap: break-word;
   width: 800px;
+  height: 950px;
+  overflow: auto;
 }
 
 .general-information {
@@ -129,8 +131,6 @@ textarea {
 }
 
 .experience-information-container {
-  overflow: hidden;
-  overflow-y:auto;
   
 }
 
