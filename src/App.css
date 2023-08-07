@@ -130,6 +130,7 @@ textarea {
 
 .experience-information-container {
   overflow-y: scroll;
+  overflow: hidden;
 }
 
 .education-header,
